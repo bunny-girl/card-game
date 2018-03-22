@@ -3,7 +3,7 @@
  */
 
 export const CHANGE_SCENE = 'CHANGE_SCENE';
-export const change_scene = (target) => {
+export const change_scene = (target = "lobby") => {
     return {
         type: CHANGE_SCENE,
         target
@@ -11,17 +11,17 @@ export const change_scene = (target) => {
 };
 
 export const MOVE_FORWARD = 'MOVE_FORWARD';
-export const move_forward = (step) => {
+export const move_forward = step => {
     return {
         type: MOVE_FORWARD,
         step,
     }
 };
 
-export const CHANGE_MAP = 'CHANGE_MAP';
-export const change_map = (map) => {
+export const ENTER_MAP = 'ENTER_MAP';
+export const enterMap = map => {
     return {
-        type: CHANGE_MAP,
+        type: ENTER_MAP,
         map
     }
 };

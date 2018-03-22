@@ -1,11 +1,16 @@
-import React, {Component} from "react";
-import levelData from '../data/level';
+/**
+ * Created by Edel on 2018/3/23.
+ */
 
-const MapSelect = ({moveScene}) => (
+import React from "react";
+import areas from "../data/map";
+import Area from "./Area";
+
+const MapSelect = ({enterMap}) => (
     <ul>
         {
-            levelData.map(l =>
-                <li key={l.id} onClick={() => moveScene('map')}>{l.name}</li>
+            areas.map((a, index) =>
+                <Area key={index} area={a}/>
             )
         }
     </ul>

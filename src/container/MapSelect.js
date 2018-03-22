@@ -1,13 +1,13 @@
 import {connect} from "react-redux";
 import MapSelect from "../component/MapSelect";
-import {change_scene} from "../action/index";
+import {enterMap} from "../action/index";
 
 const mapStateToProps = state => {
     return {}
 };
 
 const mapDispatchToProps = dispatch => ({
-    moveScene: scene => dispatch(change_scene(scene))
+    enterMap: map => dispatch(enterMap(map))
 });
 
 const MapSelectContainer = connect(mapStateToProps, mapDispatchToProps)(MapSelect);

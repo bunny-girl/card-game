@@ -1,12 +1,12 @@
 /**
  * Created by Edel on 2018/3/18.
  */
-import {CHANGE_SCENE, MOVE_FORWARD} from "../action/index";
+import {CHANGE_SCENE, ENTER_MAP, MOVE_FORWARD} from "../action/index";
 
 let DEFAULT = {
     scene: 'lobby',
-    map : '',
-    progress : 0
+    map: '',
+    progress: 0
 };
 
 const current = (state = DEFAULT, action) => {
@@ -14,12 +14,17 @@ const current = (state = DEFAULT, action) => {
         case CHANGE_SCENE :
             return {
                 scene: action.target,
-                progress:state.progress
+                progress: state.progress
             };
         case MOVE_FORWARD :
             return {
                 scene: state.scene,
-                progress:state.progress + 1
+                progress: state.progress + 1
+            };
+        case ENTER_MAP :
+            return {
+                scene: "map",
+                map: action.map
             };
         default:
             return state;

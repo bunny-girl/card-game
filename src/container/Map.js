@@ -1,11 +1,13 @@
 import {connect} from "react-redux";
 import Map from "../component/Map";
-import {} from "../action/index";
+import mapData from "../data/map";
 
 const mapStateToProps = state => {
+    let map = mapData.find(m => m.id === state.current.map);
+
     return {
-        map : state.current.map,
-        progress : state.current.progress
+        map,
+        progress: state.current.progress
     }
 };
 
