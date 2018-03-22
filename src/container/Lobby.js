@@ -10,13 +10,9 @@ const mapStateToProps = state => {
     return {}
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        moveScene: scene => {
-            dispatch(change_scene(scene));
-        }
-    }
-};
+const mapDispatchToProps = dispatch => ({
+    moveScene: scene => dispatch(change_scene(scene))
+});
 
 const LobbyContainer = connect(mapStateToProps, mapDispatchToProps)(Lobby);
 

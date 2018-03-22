@@ -11,7 +11,7 @@ const current = (state = DEFAULT, action) => {
     switch (action.type) {
         case CHANGE_SCENE :
             return {
-                scene: state.scene
+                scene: action.target
             };
         default:
             return state;

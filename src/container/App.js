@@ -6,7 +6,10 @@ import {connect} from "react-redux";
 import APP from "../component/App";
 
 const mapStateToProps = state => {
-    return {}
+    console.log(state);
+    return {
+        pos : state.current.scene
+    }
 };
 
 const mapDispatchToProps = dispatch => {
