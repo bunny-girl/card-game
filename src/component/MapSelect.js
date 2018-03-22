@@ -1,13 +1,14 @@
 import React, {Component} from "react";
+import levelData from '../data/level';
 
-class MapSelect extends Component {
-    render() {
-        return (
-            <ul>
-                <li>1</li>
-            </ul>
-        );
-    }
-}
+const MapSelect = ({moveScene}) => (
+    <ul>
+        {
+            levelData.map(l =>
+                <li key={l.id} onClick={() => moveScene('map')}>{l.name}</li>
+            )
+        }
+    </ul>
+);
 
 export default MapSelect;

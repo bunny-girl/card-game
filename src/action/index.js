@@ -9,3 +9,19 @@ export const change_scene = (target) => {
         target
     }
 };
+
+export const MOVE_FORWARD = 'MOVE_FORWARD';
+export const move_forward = (step) => {
+    return {
+        type: MOVE_FORWARD,
+        step,
+    }
+};
+
+export const CHANGE_MAP = 'CHANGE_MAP';
+export const change_map = (map) => {
+    return {
+        type: CHANGE_MAP,
+        map
+    }
+};

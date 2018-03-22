@@ -3,17 +3,18 @@
  */
 
 import React from "react";
+import "../App.css";
 import Lobby from '../container/Lobby';
 import MapSelect from '../container/MapSelect';
-import "../App.css";
+import Map from "../container/Map";
 
-const App = ({pos}) => {
+const App = ({scene}) => {
     {
-        console.log(pos);
-        switch (pos) {
+        switch (scene) {
             case "mapSelect" :
-                console.log('`');
                 return <MapSelect/>;
+            case "map" :
+                return <Map/>;
             default:
                 return <Lobby/>;
         }

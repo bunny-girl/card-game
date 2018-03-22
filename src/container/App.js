@@ -6,9 +6,8 @@ import {connect} from "react-redux";
 import APP from "../component/App";
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
-        pos : state.current.scene
+        scene : state.current.scene
     }
 };
 
