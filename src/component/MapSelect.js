@@ -4,13 +4,13 @@
 
 import React from "react";
 import areas from "../data/map";
-import Area from "./Area";
+import Area from "../container/Area";
 
 const MapSelect = ({enterMap}) => (
     <ul>
         {
-            areas.map((a, index) =>
-                <Area key={index} area={a}/>
+            areas.map(a =>
+                <Area key={a.id} area={a}/>
             )
         }
     </ul>

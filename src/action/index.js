@@ -11,17 +11,17 @@ export const change_scene = (target = "lobby") => {
 };
 
 export const MOVE_FORWARD = 'MOVE_FORWARD';
-export const move_forward = step => {
+export const move_forward = () => {
     return {
         type: MOVE_FORWARD,
-        step,
     }
 };
 
 export const ENTER_MAP = 'ENTER_MAP';
-export const enterMap = map => {
+export const enterMap = (mapId, areaId) => {
     return {
         type: ENTER_MAP,
-        map
+        mapId,
+        areaId
     }
 };

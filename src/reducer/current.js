@@ -5,7 +5,8 @@ import {CHANGE_SCENE, ENTER_MAP, MOVE_FORWARD} from "../action/index";
 
 let DEFAULT = {
     scene: 'lobby',
-    map: '',
+    mapId: '',
+    areaId: '',
     progress: 0
 };
 
@@ -13,18 +14,20 @@ const current = (state = DEFAULT, action) => {
     switch (action.type) {
         case CHANGE_SCENE :
             return {
+                ...state,
                 scene: action.target,
-                progress: state.progress
             };
         case MOVE_FORWARD :
             return {
-                scene: state.scene,
+                ...state,
                 progress: state.progress + 1
             };
         case ENTER_MAP :
             return {
                 scene: "map",
-                map: action.map
+                mapId: action.mapId,
+                areaId: action.areaId,
+                progress: 0
             };
         default:
             return state;
