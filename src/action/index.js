@@ -25,3 +25,10 @@ export const enterMap = (mapId, areaId) => {
         areaId
     }
 };
+
+export const GET_CARD = 'GET_CARD';
+export const getCard = (id) => {
+    return {
+        type: GET_CARD,
+    }
+};
