@@ -1,11 +1,12 @@
 import React from "react";
 import ToolBar from "../container/ToolBar";
+import Card from "./Card";
 
 const Bag = ({cards}) => (
     <div>
         <div className="row">
             {
-                cards.map((card, index) => <div className="col-lg-2 col-sm-1" key={index}>{card.name}</div>)
+                cards.map((card, index) => (<div className="col-lg-1" key={index}><Card {...card}/></div>))
             }
         </div>
         <ToolBar/>

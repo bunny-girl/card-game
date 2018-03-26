@@ -1,11 +1,10 @@
 import {connect} from "react-redux";
 import MapSelect from "../component/MapSelect";
 import {enterMap, selectArea} from "../action/index";
-import mapData from '../data/map';
+import mapData from "../data/map";
 
 const mapStateToProps = state => {
     let area = mapData.find(m => m.id === state.current.areaId);
-    console.log(area);
     return {
         currentArea: area
     }
