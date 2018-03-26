@@ -1,16 +1,20 @@
-import {} from "../action/index";
+import {GET_CARD} from "../action/index";
+import cardData from '../data/card';
 
 let DEFAULT = {
-    card : []
+    card: []
 };
 
 const bag = (state = DEFAULT, action) => {
     switch (action.type) {
-        // case CHANGE_SCENE :
-        //     return {
-        //         ...state,
-        //         scene: action.target,
-        //     };
+        case GET_CARD :
+            let card = cardData.find(c => c.id === action.id);
+            return {
+                card: [
+                    ...state.card,
+                    card
+                ]
+            };
         default:
             return state;
     }

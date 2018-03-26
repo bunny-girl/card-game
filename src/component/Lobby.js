@@ -3,13 +3,12 @@
  */
 
 import React from "react";
+import ToolBar from "../container/ToolBar";
 
-const Lobby = ({moveScene}) => (
+const Lobby = () => (
     <div>
-        <div className="fixed-bottom row text-center justify-content-end">
-            <div className="col-lg-1 col-md-2 col-sm-3" onClick={() => moveScene('mapSelect')}>探索</div>
-            <div className="col-lg-1 col-md-2 col-sm-3">背包</div>
-        </div>
+        <div>立绘</div>
+        <ToolBar/>
     </div>
 );
 

@@ -5,10 +5,11 @@
 import React from "react";
 import areas from "../data/map";
 import Area from "../container/Area";
+import ToolBar from "../container/ToolBar";
 
 const MapSelect = ({enterMap, selectArea, currentArea}) => (
     <div className="row">
-        <div className="col-lg-4 col-sm-12">
+        <div className="col-lg-4 col-md-4 col-sm-12">
             <ul>
                 {
                     areas.map(a =>
@@ -17,11 +18,12 @@ const MapSelect = ({enterMap, selectArea, currentArea}) => (
                 }
             </ul>
         </div>
-        <div className="col-lg-8 col-sm-12">
+        <div className="col-lg-8 col-md-8 col-sm-12">
             {
                 currentArea ? <Area area={currentArea}/> : <p>未选定区域</p>
             }
         </div>
+        <ToolBar/>
     </div>
 );
 

@@ -4,14 +4,11 @@
 
 import {connect} from "react-redux";
 import Lobby from "../component/Lobby";
-import {change_scene} from "../action/index";
 
-const mapStateToProps = state => {
-    return {}
-};
+const mapStateToProps = state => ({
+});
 
 const mapDispatchToProps = dispatch => ({
-    moveScene: scene => dispatch(change_scene(scene))
 });
 
 const LobbyContainer = connect(mapStateToProps, mapDispatchToProps)(Lobby);

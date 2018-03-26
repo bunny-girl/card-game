@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import Map from "../component/Map";
 import mapData from "../data/map";
-import {move_forward} from "../action/index";
+import {move_forward, getCard} from "../action/index";
 
 const mapStateToProps = state => {
     let area = mapData.find(a => a.id === state.current.areaId);
@@ -25,7 +25,10 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    onClick: () => dispatch(move_forward())
+    onClick: () => {
+        dispatch(move_forward());
+        dispatch(getCard(1));
+    }
 });
 
 const MapContainer = connect(mapStateToProps, mapDispatchToProps)(Map);

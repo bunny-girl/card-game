@@ -1,4 +1,5 @@
 import React from "react";
+import ToolBar from "../container/ToolBar";
 
 const Map = ({area, map, style, width, onClick}) => (
     <div>
@@ -9,6 +10,7 @@ const Map = ({area, map, style, width, onClick}) => (
             </div>
         </div>
         <button onClick={onClick}>探索</button>
+        <ToolBar/>
     </div>
 );
 

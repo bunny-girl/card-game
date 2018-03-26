@@ -8,6 +8,7 @@ import StatusBar from "./StatusBar";
 import MapSelect from "../container/MapSelect";
 import Map from "../container/Map";
 import Lobby from "../container/Lobby";
+import Bag from "../container/Bag";
 
 const App = ({scene}) => {
     let mainScene;
@@ -18,6 +19,9 @@ const App = ({scene}) => {
             break;
         case "map" :
             mainScene = <Map/>;
+            break;
+        case "bag" :
+            mainScene = <Bag/>;
             break;
         default:
             mainScene = <Lobby/>;
