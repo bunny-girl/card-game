@@ -4,21 +4,25 @@
 
 import React from "react";
 import "../App.css";
-import Lobby from '../container/Lobby';
-import MapSelect from '../container/MapSelect';
+import StatusBar from "./StatusBar";
+import MapSelect from "../container/MapSelect";
 import Map from "../container/Map";
+import Lobby from "../container/Lobby";
 
 const App = ({scene}) => {
-    {
-        switch (scene) {
-            case "mapSelect" :
-                return <MapSelect/>;
-            case "map" :
-                return <Map/>;
-            default:
-                return <Lobby/>;
-        }
+    let mainScene;
+    switch
+        (scene) {
+        case "mapSelect" :
+            mainScene = <MapSelect/>;
+            break;
+        case "map" :
+            mainScene = <Map/>;
+            break;
+        default:
+            mainScene = <Lobby/>;
     }
+    return <div><StatusBar/>{mainScene}</div>
 };
 
 export default App;

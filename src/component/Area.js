@@ -13,7 +13,7 @@ const Area = ({area, enterMap}) => {
         } else {
             areaBasic = <p className="closed"><strike>{area.name}</strike></p>
         }
-        return <li>{areaBasic}{mapList}</li>;
+        return <div>{areaBasic}{mapList}</div>;
     }
 };
 

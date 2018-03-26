@@ -1,7 +1,7 @@
 /**
  * Created by Edel on 2018/3/18.
  */
-import {CHANGE_SCENE, ENTER_MAP, MOVE_FORWARD} from "../action/index";
+import {CHANGE_SCENE, ENTER_MAP, MOVE_FORWARD, SELECT_AREA} from "../action/index";
 
 let DEFAULT = {
     scene: 'lobby',
@@ -21,6 +21,11 @@ const current = (state = DEFAULT, action) => {
             return {
                 ...state,
                 progress: state.progress + 1
+            };
+        case SELECT_AREA :
+            return {
+                ...state,
+                areaId: action.area
             };
         case ENTER_MAP :
             return {

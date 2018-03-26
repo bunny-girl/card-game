@@ -32,3 +32,11 @@ export const getCard = (id) => {
         type: GET_CARD,
     }
 };
+
+export const SELECT_AREA = 'SELECT_AREA';
+export const selectArea = (area) => {
+    return {
+        type: SELECT_AREA,
+        area,
+    }
+};

@@ -3,9 +3,11 @@
  */
 import {combineReducers} from "redux";
 import current from "./current";
+import bag from "./bag";
 
 const coreReducer = combineReducers({
     current,
+    bag,
 });
 
 export default coreReducer;
