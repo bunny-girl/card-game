@@ -21,6 +21,10 @@ const mapStateToProps = state => ({
             name: '背包',
             id: 'bag'
         },
+        {
+            name: '卡组',
+            id: 'deck'
+        },
     ]
 });
 

@@ -9,6 +9,7 @@ import MapSelect from "../container/MapSelect";
 import Map from "../container/Map";
 import Lobby from "../container/Lobby";
 import Bag from "../container/Bag";
+import Deck from "../container/Deck";
 
 const App = ({scene}) => {
     let mainScene;
@@ -22,6 +23,9 @@ const App = ({scene}) => {
             break;
         case "bag" :
             mainScene = <Bag/>;
+            break;
+        case "deck" :
+            mainScene = <Deck/>;
             break;
         default:
             mainScene = <Lobby/>;
