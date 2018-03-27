@@ -18,3 +18,7 @@ export const getId = () => {
 
     return s.join("");
 };
+
+export const getImgSrc = path => {
+    return `${process.env.PUBLIC_URL}/images/${path}`;
+};

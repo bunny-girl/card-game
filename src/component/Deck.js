@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
 import ToolBar from "../container/ToolBarCon";
 import CardSelection from "../container/CardSelectionCon";
+import {getImgSrc} from "../util";
 
 const Deck = ({cards}) => (
     <div>
@@ -9,7 +9,9 @@ const Deck = ({cards}) => (
             <div className="col-4 row">
                 {
                     cards.map((card, index) => (
-                        <div className="col-4" key={index}><Card {...card}/></div>))
+                        <div className="col-4" key={index}>
+                            <img src={getImgSrc(`thumbnails/${card.id}.png`)} className="img-thumbnail"/>
+                        </div>))
                 }
             </div>
             <div className="col-8">
