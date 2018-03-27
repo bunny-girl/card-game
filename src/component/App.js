@@ -4,12 +4,12 @@
 
 import React from "react";
 import "../App.css";
-import StatusBar from "../container/StatusBar";
-import MapSelect from "../container/MapSelect";
-import Map from "../container/Map";
-import Lobby from "../container/Lobby";
-import Bag from "../container/Bag";
-import Deck from "../container/Deck";
+import StatusBar from "../container/StatusBarCon";
+import MapSelect from "../container/MapSelectCon";
+import Map from "../container/MapCon";
+import Lobby from "../container/LobbyCon";
+import Bag from "../container/BagCon";
+import Deck from "../container/DeckCon";
 
 const App = ({scene}) => {
     let mainScene;

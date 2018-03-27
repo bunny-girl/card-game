@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import ToolBar from "../container/ToolBar";
+import ToolBar from "../container/ToolBarCon";
 
 const Lobby = () => (
     <div>

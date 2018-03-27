@@ -4,8 +4,8 @@
 
 import React from "react";
 import areas from "../data/map";
-import Area from "../container/Area";
-import ToolBar from "../container/ToolBar";
+import Area from "../container/AreaCon";
+import ToolBar from "../container/ToolBarCon";
 
 const MapSelect = ({enterMap, selectArea, currentArea}) => (
     <div className="row">

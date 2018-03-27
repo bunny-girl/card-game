@@ -2,7 +2,9 @@ import {connect} from "react-redux";
 import Deck from "../component/Deck";
 
 const mapStateToProps = state => ({
-    cards : state.bag.deck
+    cards: state.bag.card.filter(card => {
+        return state.bag.deck.includes(card._id)
+    })
 });
 
 const mapDispatchToProps = dispatch => ({

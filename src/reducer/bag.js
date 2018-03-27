@@ -1,6 +1,7 @@
-import {GET_CARD, GET_LOOT} from "../action/index";
+import {GET_CARD, GET_LOOT, PUT_CARD_INTO_DECK} from "../action/index";
 import cardData from "../data/card";
 import lootData from "../data/loot";
+import {clone, getId} from "../util";
 
 let DEFAULT = {
     card: [],
@@ -9,7 +10,11 @@ let DEFAULT = {
     stamina : 0,
 };
 
-const getCard = id => cardData.find(c => c.id === id);
+const createCard = id => {
+    let _card = clone(cardData.find(c => c.id === id));
+    _card._id = getId();
+    return _card;
+};
 
 const bag = (state = DEFAULT, action) => {
     let card, coin;
@@ -22,6 +27,14 @@ const bag = (state = DEFAULT, action) => {
                 card: [
                     ...state.card,
                     card
+                ]
+            };
+        case PUT_CARD_INTO_DECK :
+            return {
+                ...state,
+                deck: [
+                    ...state.deck,
+                    action.id
                 ]
             };
         case GET_LOOT :
@@ -49,7 +62,7 @@ const bag = (state = DEFAULT, action) => {
                 }
                 
                 if(item['card']){
-                    card.push(getCard(item['card']['id']))
+                    card.push(createCard(item['card']['id']))
                 }
                 
                 console.log(coin);

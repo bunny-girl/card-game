@@ -42,6 +42,14 @@ export const getLoot = (id) => {
     }
 };
 
+export const PUT_CARD_INTO_DECK = 'PUT_CARD_INTO_DECK';
+export const putCardIntoDeck = (id) => {
+    return {
+        type: PUT_CARD_INTO_DECK,
+        id,
+    }
+};
+
 export const SELECT_AREA = 'SELECT_AREA';
 export const selectArea = (area) => {
     return {

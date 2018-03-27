@@ -1,5 +1,5 @@
 import React from "react";
-import ToolBar from "../container/ToolBar";
+import ToolBar from "../container/ToolBarCon";
 import Card from "./Card";
 
 const Bag = ({cards}) => (

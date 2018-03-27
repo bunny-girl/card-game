@@ -1,5 +1,5 @@
 import React from "react";
-import ToolBar from "../container/ToolBar";
+import ToolBar from "../container/ToolBarCon";
 
 const Map = ({area, map, progress, width, onClick}) => (
     <div>

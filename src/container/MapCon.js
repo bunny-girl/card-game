@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import Map from "../component/Map";
 import mapData from "../data/map";
-import {move_forward, getCard, getLoot} from "../action/index";
+import {getLoot, move_forward} from "../action/index";
 
 const mapStateToProps = state => {
     let area = mapData.find(a => a.id === state.current.areaId);
