@@ -34,6 +34,14 @@ export const getCard = (id) => {
     }
 };
 
+export const GET_LOOT = 'GET_LOOT';
+export const getLoot = (id) => {
+    return {
+        type: GET_LOOT,
+        id,
+    }
+};
+
 export const SELECT_AREA = 'SELECT_AREA';
 export const selectArea = (area) => {
     return {

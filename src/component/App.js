@@ -4,7 +4,7 @@
 
 import React from "react";
 import "../App.css";
-import StatusBar from "./StatusBar";
+import StatusBar from "../container/StatusBar";
 import MapSelect from "../container/MapSelect";
 import Map from "../container/Map";
 import Lobby from "../container/Lobby";

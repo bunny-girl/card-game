@@ -1,7 +1,11 @@
 import {connect} from "react-redux";
 import StatusBar from "../component/StatusBar";
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+	cardNum : state.bag.card.length,
+	coin : state.bag.coin,
+	stamina : state.bag.stamina
+});
 
 const mapDispatchToProps = dispatch => ({
 });
