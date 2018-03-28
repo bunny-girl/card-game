@@ -1,19 +1,12 @@
 import {GET_CARD, GET_LOOT, PUT_CARD_INTO_DECK} from "../action/index";
 import cardData from "../data/card";
-import lootData from "../data/loot";
-import {clone, getId} from "../util";
+import {analyseLootPack} from "../logic/compute";
 
 let DEFAULT = {
     card: [],
     deck: [],
-    coin : 0,
-    stamina : 0,
-};
-
-const createCard = id => {
-    let _card = clone(cardData.find(c => c.id === id));
-    _card._id = getId();
-    return _card;
+    coin: 0,
+    stamina: 0,
 };
 
 const bag = (state = DEFAULT, action) => {
@@ -38,36 +31,15 @@ const bag = (state = DEFAULT, action) => {
                 ]
             };
         case GET_LOOT :
-            let loot = lootData[action.id];
+            let {coin : coinAdd , card : cardAdd} = analyseLootPack(action.id);
             coin = state.coin;
             card = state.card;
-            if(loot){
-                let sum = 0, item, choose;
-                loot.map(item => sum += item.weight);
 
-                let decision = Math.random() * sum;
-
-                loot.map((l, index) => {
-                    decision -= l.weight;
-                    if(decision <= 0 && !item){
-                        item = l;
-                        choose = index;
-                    }
-                });
-
-                item = item || {};
-
-                if(item['coin']){
-                    coin += item['coin'];
-                }
-                
-                if(item['card']){
-                    card.push(createCard(item['card']['id']))
-                }
-                
-                console.log(coin);
-                console.log(card);
+            coin += coinAdd;
+            if (cardAdd) {
+                card.push(cardAdd);
             }
+
             return {
                 ...state,
                 card,

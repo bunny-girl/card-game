@@ -1,7 +1,7 @@
 import React from "react";
 import ToolBar from "../container/ToolBarCon";
 import CardSelection from "../container/CardSelectionCon";
-import {getImgSrc} from "../util";
+import {getImgSrc} from "../logic/util";
 
 const Deck = ({cards}) => (
     <div>
@@ -10,7 +10,8 @@ const Deck = ({cards}) => (
                 {
                     cards.map((card, index) => (
                         <div className="col-4" key={index}>
-                            <img src={getImgSrc(`thumbnails/${card.id}.png`)} className="img-thumbnail"/>
+                            <div>{card.id}</div>
+                            {/* <img src={getImgSrc(`thumbnails/${card.id}.png`)} className="img-thumbnail"/> */}
                         </div>))
                 }
             </div>

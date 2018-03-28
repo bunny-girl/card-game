@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import {getImgSrc} from "../util";
+import {getImgSrc} from "../logic/util";
 
 const CardSelection = ({cards, onClick}) => (
     <div>
@@ -11,7 +11,8 @@ const CardSelection = ({cards, onClick}) => (
             {
                 cards.map((card, index) => (
                     <div className="col-lg-1 col-md-3 col-sm-4" key={index} onClick={e => onClick(card._id)}>
-                        <img src={getImgSrc(`thumbnails/${card.id}.png`)} className="img-thumbnail"/>
+                        {card.id}
+                        {/* <img src={getImgSrc(`thumbnails/${card.id}.png`)} className="img-thumbnail"/> */}
                     </div>))
             }
         </div>
