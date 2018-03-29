@@ -6,7 +6,6 @@ let DEFAULT = {
     card: [],
     deck: [],
     coin: 0,
-    stamina: 0,
 };
 
 const bag = (state = DEFAULT, action) => {

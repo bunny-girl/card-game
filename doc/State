@@ -1,0 +1,49 @@
+{
+	current : {
+		scene : 'Map',//Lobby MapSelect Map Bag Deck
+		stamina : 10,
+		isFetching : false,
+	},
+	userData : {
+		maxStamina : 120,//Calculated by Player Level
+		maxLevel : 40,//HardCoded
+	},
+	mapData : {
+		area : {
+			id : 0,
+			name : '',
+			maps : ["ids"],
+			open : true,//false to see if we open it by Server
+			unlockFlag : [
+			],//The unlock condiftions.
+		},
+		map : {
+			id : 0,
+			name : ''
+			step : 7,
+			event : 0001,
+			progress : 3,//This one is generated and will regenerate once you are out.
+			clearLoot : 0001,
+		},
+		event : {
+			type : 'Monster',//Choice Loot
+		}
+	}
+	bag : {
+		card : [
+			{
+				'uid' : "cardUid1",
+				'id' : 0,
+				'exp' : 10,
+				'type' : 11
+			}
+		],
+		deck : ['cardUid1', 'cardUid2'],
+		coin : 10
+	},
+	userInfo : {
+		name : 'Nick',
+		gender : 'male',
+		uid : 'UserUid0001'
+	}
+}
