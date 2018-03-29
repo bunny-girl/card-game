@@ -14,5 +14,13 @@ export default {
                 id : 0
             },
         },
+    ],
+    "002" : [
+        {
+            weight : 1,
+            card : {
+                id :0
+            }
+        }
     ]
 };

@@ -7,7 +7,8 @@ let DEFAULT = {
     scene: 'lobby',
     mapId: '',
     areaId: '',
-    progress: 0
+    progress: 0,
+    event : ''
 };
 
 const current = (state = DEFAULT, action) => {
@@ -20,7 +21,8 @@ const current = (state = DEFAULT, action) => {
         case MOVE_FORWARD :
             return {
                 ...state,
-                progress: state.progress + 1
+                progress: state.progress + 1,
+                event : action.eventId
             };
         case SELECT_AREA :
             return {

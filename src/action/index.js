@@ -11,9 +11,18 @@ export const change_scene = (target = "lobby") => {
 };
 
 export const MOVE_FORWARD = 'MOVE_FORWARD';
-export const move_forward = () => {
+export const move_forward = eventId => {
     return {
         type: MOVE_FORWARD,
+        eventId
+    }
+};
+
+export const DEAL_EVENT = 'DEAL_EVENT';
+export const dealEvent = eventId => {
+    return {
+        type: DEAL_EVENT,
+        eventId
     }
 };
 

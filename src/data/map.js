@@ -11,7 +11,7 @@ export default [
                 id: 'm-001-001',
                 name: '登陆点',
                 steps: 7,
-                loot : "001"
+                event : "e-001"
             }
         ],
         open: true
@@ -24,7 +24,7 @@ export default [
                 id: 'm-002-001',
                 name: '测试区域',
                 steps: 9,
-                loot : "001"
+                event : "e-001"
             }
         ],
         open: true,

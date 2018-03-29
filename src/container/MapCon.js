@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import Map from "../component/Map";
 import mapData from "../data/map";
-import {getLoot, move_forward} from "../action/index";
+import {getLoot, move_forward, dealEvent} from "../action/index";
 
 const mapStateToProps = state => {
     let area = mapData.find(a => a.id === state.current.areaId);
@@ -28,9 +28,9 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    onClick: () => {
-        dispatch(move_forward());
-        dispatch(getLoot("001"));
+    onClick: eventId => {
+        dispatch(move_forward(eventId));
+        dispatch(dealEvent(eventId));
     }
 });
 
