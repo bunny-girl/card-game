@@ -1,14 +1,22 @@
-import {} from "../action/index";
+import {REQUEST_USER_INFO_SUCCESS} from "../action/userInfo";
 
 let DEFAULT = {
-	name : "",
-	gender : "",
-	uid : ""
+	nickname: "",
+	gender: "",
+	uid: ""
 };
 
-export const userInfo = (state = DEFAULT, action) => {
+const userInfo = (state = DEFAULT, action) => {
 	switch (action.type) {
-        default:
-            return state;
-    }
+		case REQUEST_USER_INFO_SUCCESS:
+			return {
+				nickname: action.data.nickname,
+				gender: action.data.gender,
+				uid: action.data.uid
+			};
+		default:
+			return state;
+	}
 };
+
+export default userInfo;

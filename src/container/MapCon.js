@@ -1,14 +1,16 @@
 import {connect} from "react-redux";
 import Map from "../component/Map";
-import mapData from "../data/map";
-import {getLoot, move_forward, dealEvent} from "../action/index";
+// import mapData from "../data/map";
+import {dealEvent, move_forward} from "../action/index";
 
 const mapStateToProps = state => {
-    let area = mapData.find(a => a.id === state.current.areaId);
-    let map;
-    if (area && area.maps) {
-        map = area.maps.find(m => m.id === state.current.mapId);
-    }
+	// let area = mapData.find(a => a.id === state.current.areaId);
+	// let map;
+	// if (area && area.maps) {
+	//     map = area.maps.find(m => m.id === state.current.mapId);
+	// }
+
+	let {area, map} = state.mapData;
 
     let progress = state.current.progress;
 

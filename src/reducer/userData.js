@@ -1,4 +1,4 @@
-import {REQUEST_USER_DATA_SUCCESS} from "../action/index";
+import {REQUEST_USER_DATA_SUCCESS} from "../action/userData";
 
 let DEFAULT = {
     maxStamina : "N/A",
@@ -6,12 +6,13 @@ let DEFAULT = {
 };
 
 const userData = (state = DEFAULT, action) => {
+	console.log(action);
 	switch (action.type) {
-		case 'REQUEST_USER_DATA_SUCCESS':
+		case REQUEST_USER_DATA_SUCCESS:
 			return {
 				maxStamina : action.data.maxStamina,
 				maxLevel : action.data.maxLevel
-			}
+			};
         default:
             return state;
     }

@@ -7,7 +7,7 @@ import areas from "../data/map";
 import Area from "../container/AreaCon";
 import ToolBar from "../container/ToolBarCon";
 
-const MapSelect = ({enterMap, selectArea, currentArea}) => (
+const MapSelect = ({selectArea, currentArea}) => (
     <div className="row">
         <div className="col-lg-4 col-md-4 col-sm-12">
             <ul>

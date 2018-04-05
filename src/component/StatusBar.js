@@ -2,9 +2,9 @@ import React from "react";
 
 class StatusBar extends React.Component {
     // ({cardNum, coin, stamina, maxStamina}) => {
-    constructor(props) {
-        super(props);
-    }
+	// constructor(props) {
+	//     super(props);
+	// }
 
     componentDidMount() {
     	this.props.getStatus();
@@ -12,6 +12,7 @@ class StatusBar extends React.Component {
 
     render() {
         return (<div className="row status-bar">
+            <div className="col-2">玩家:{this.props.nickname}</div>
             <div className="col-2">卡牌:{this.props.cardNum}</div>
             <div className="col-2">金币:{this.props.coin}</div>
             <div className="col-2">体力:{this.props.stamina}/{this.props.maxStamina}</div>

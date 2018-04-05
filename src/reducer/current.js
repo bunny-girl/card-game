@@ -1,7 +1,8 @@
 /**
  * Created by Edel on 2018/3/18.
  */
-import {CHANGE_SCENE, ENTER_MAP, MOVE_FORWARD, SELECT_AREA, REQUEST_USER_DATA, REQUEST_USER_DATA_SUCCESS} from "../action/index";
+import {CHANGE_SCENE, ENTER_MAP, MOVE_FORWARD, SELECT_AREA} from "../action/index";
+import {REQUEST_USER_DATA, REQUEST_USER_DATA_SUCCESS} from "../action/userData";
 
 let DEFAULT = {
     scene: 'lobby',

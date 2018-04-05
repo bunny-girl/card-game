@@ -2,22 +2,6 @@
  * Created by Edel on 2018/3/18.
  */
 
-export const REQUEST_USER_DATA = 'REQUEST_USER_DATA';
-export const requestUserData = () => {
-    console.log('fuck!');
-    return {
-        type : REQUEST_USER_DATA,
-    }
-};
-
-export const REQUEST_USER_DATA_SUCCESS = 'REQUEST_USER_DATA_SUCCESS';
-export const requestUserDataSuccess = data => {
-    return {
-        type : REQUEST_USER_DATA_SUCCESS,
-        data,
-    }
-}
-
 export const CHANGE_SCENE = 'CHANGE_SCENE';
 export const change_scene = (target = "lobby") => {
     return {
@@ -41,7 +25,7 @@ const requestEvent = (mapId, areaId) => {
         mapId,
         areaId,
     }
-}
+};
 
 export const REQUEST_EVENT_SUCCESS = 'REQUEST_EVENT_SUCCESS';
 const requestEventSuccess = data => {
@@ -49,7 +33,7 @@ const requestEventSuccess = data => {
         type : REQUEST_EVENT_SUCCESS,
         data : data
     }
-}
+};
 
 export const DEAL_EVENT = 'DEAL_EVENT';
 export const dealEvent = eventId => {
