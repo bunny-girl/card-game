@@ -1,6 +1,7 @@
 import {connect} from "react-redux";
 import MapSelect from "../component/MapSelect";
 import mapData from "../data/map";
+import {selectArea} from "../action/index";
 
 const mapStateToProps = state => {
 	let area = mapData.find(m => m.id === state.current.areaId);
@@ -10,7 +11,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-	// selectArea: areaId => dispatch(selectArea(areaId))
+	selectArea: areaId => dispatch(selectArea(areaId))
 });
 
 const MapSelectContainer = connect(mapStateToProps, mapDispatchToProps)(MapSelect);

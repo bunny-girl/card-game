@@ -1,25 +1,12 @@
 import {connect} from "react-redux";
 import Map from "../component/Map";
-// import mapData from "../data/map";
-import {dealEvent, move_forward} from "../action/index";
+import {dealEvent} from "../action/index";
+import {moveForward} from "../action/mapData";
 
 const mapStateToProps = state => {
-	// let area = mapData.find(a => a.id === state.current.areaId);
-	// let map;
-	// if (area && area.maps) {
-	//     map = area.maps.find(m => m.id === state.current.mapId);
-	// }
+	let {area, map, progress} = state.mapData;
 
-	let {area, map} = state.mapData;
-
-    let progress = state.current.progress;
-
-    let width = Math.floor(state.current.progress / map.steps * 100, 1);
-
-    // let style = {
-    //     width: `${width}%`,
-    //     display : progress === map.steps ? "none" : ""
-    // };
+	let width = Math.floor(progress / map.steps * 100, 1);
 
     return {
         area,
@@ -31,7 +18,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     onClick: eventId => {
-        dispatch(move_forward(eventId));
+		dispatch(moveForward());
         dispatch(dealEvent(eventId));
     }
 });

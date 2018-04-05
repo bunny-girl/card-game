@@ -6,7 +6,6 @@ let DEFAULT = {
 };
 
 const userData = (state = DEFAULT, action) => {
-	console.log(action);
 	switch (action.type) {
 		case REQUEST_USER_DATA_SUCCESS:
 			return {

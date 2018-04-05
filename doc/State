@@ -22,9 +22,9 @@
 			name : ''
 			step : 7,
 			event : 0001,
-			progress : 3,//This one is generated and will regenerate once you are out.
 			clearLoot : 0001,
 		},
+        progress : 3,//This one is generated and will regenerate once you are out.
 		event : {
 			type : 'Monster',//Choice Loot
 		}

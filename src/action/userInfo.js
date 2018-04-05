@@ -14,7 +14,6 @@ const requestUserInfo = () => {
 };
 
 const requestUserInfoSuccess = data => {
-	console.log(data);
 	return {
 		type: REQUEST_USER_INFO_SUCCESS,
 		data,
